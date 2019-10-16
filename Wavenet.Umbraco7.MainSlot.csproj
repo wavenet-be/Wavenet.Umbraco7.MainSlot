@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <Company>Wavenet</Company>
+    <Authors>Olivier Bossaer</Authors>
+    <Description>Avoids access to 2 instances of Umbraco backoffice during A/B testing.</Description>
+    <Copyright>Wavenet ©</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/wavenet-be/Wavenet.Umbraco7.MainSlot/</PackageProjectUrl>
+    <PackageIconUrl>https://www.wavenet.be/favicon.ico</PackageIconUrl>
+    <RepositoryUrl>https://github.com/wavenet-be/Wavenet.Umbraco7.MainSlot/</RepositoryUrl>
+    <PackageTags>Umbraco7 Azure AB testing</PackageTags>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>Wavenet.Umbraco7.MainSlot.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="UmbracoCms.Core" Version="[7.2,8)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wavenet.Umbraco7.MainSlot</name>
+    </assembly>
+    <members>
+        <member name="T:Wavenet.Umbraco7.MainSlot.Constants">
+            <summary>
+              <see cref="T:Wavenet.Umbraco7.MainSlot.Constants"/>.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.Constants.HeaderLocation">
+            <summary>
+            The "Location" header.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.Constants.ProductionSlot">
+            <summary>
+            The production slot.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.Constants.RedirectStatusCode">
+            <summary>
+            The redirect status code.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.Constants.RoutingCookie">
+            <summary>
+            The routing cookie.
+            </summary>
+        </member>
+        <member name="T:Wavenet.Umbraco7.MainSlot.EnsureMainSlotFilter">
+            <summary>
+            <see cref="T:Wavenet.Umbraco7.MainSlot.EnsureMainSlotFilter"/>.
+            </summary>
+            <seealso cref="T:System.Web.Mvc.IActionFilter" />
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.EnsureMainSlotFilter.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            Called after the action method executes.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.EnsureMainSlotFilter.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            Called before an action method executes.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+        </member>
+        <member name="T:Wavenet.Umbraco7.MainSlot.EnsureProductionController">
+            <summary>
+            <see cref="T:Wavenet.Umbraco7.MainSlot.EnsureProductionController"/>.
+            </summary>
+            <seealso cref="T:Umbraco.Web.Mvc.SurfaceController" />
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.EnsureProductionController.Index(System.String)">
+            <summary>
+            Indexes the specified redirect URL.
+            </summary>
+            <param name="redirectUrl">The redirect URL.</param>
+            <returns>The redirection.</returns>
+        </member>
+        <member name="T:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult">
+            <summary>
+              <see cref="T:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult" />.
+            </summary>
+            <seealso cref="T:System.Web.Mvc.ActionResult" />
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult.setCookie">
+            <summary>
+            Set cookie with redirection.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult.url">
+            <summary>
+            The URL.
+            </summary>
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult" /> class.
+            </summary>
+            <param name="url">The URL.</param>
+            <param name="setCookie">if set to <c>true</c> set the cookie with redirection.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult.EnsureProductionSlot(System.Web.HttpContextBase)">
+            <summary>
+            Ensures the production slot.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.RedirectToMainSlotActionResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Enables processing of the result of an action method by a custom type that inherits from the <see cref="T:System.Web.Mvc.ActionResult" /> class.
+            </summary>
+            <param name="context">The context in which the result is executed. The context information includes the controller, HTTP content, request context, and route data.</param>
+        </member>
+        <member name="T:Wavenet.Umbraco7.MainSlot.Setup">
+            <summary>
+            <see cref="T:Wavenet.Umbraco7.MainSlot.Setup"/>.
+            </summary>
+            <seealso cref="T:Umbraco.Core.ApplicationEventHandler" />
+        </member>
+        <member name="M:Wavenet.Umbraco7.MainSlot.Setup.ApplicationStarted(Umbraco.Core.UmbracoApplicationBase,Umbraco.Core.ApplicationContext)">
+            <summary>
+            Overridable method to execute when Bootup is completed, this allows you to perform any other bootup logic required for the application.
+            Resolution is frozen so now they can be used to resolve instances.
+            </summary>
+            <param name="umbracoApplication">The Umbraco Application.</param>
+            <param name="applicationContext">The application context.</param>
+        </member>
+    </members>
+</doc>
